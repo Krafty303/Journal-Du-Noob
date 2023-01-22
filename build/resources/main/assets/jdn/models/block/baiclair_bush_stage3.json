@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "jdn:block/baiclair_bush_stage3"
+  }
+}
