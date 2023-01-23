@@ -7,6 +7,7 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -21,6 +22,12 @@ import org.slf4j.Logger;
 @Mod(JournalDuNoobMod.MODID)
 public class JournalDuNoobMod {
     public static final String MODID = "jdn";
+    public static final CreativeModeTab JDNCreativeTab = new CreativeModeTab("tabjdn") {
+        @Override
+        public ItemStack makeIcon() {
+            return ItemInit.BAICLAIR_ITEM.get().getDefaultInstance();
+        }
+    };
 
     public JournalDuNoobMod() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
