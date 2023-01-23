@@ -13,5 +13,5 @@ import static com.krafty.jdn.init.BlockInit.BAICLAIR_BUSH_BLOCK;
 public class ItemInit {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, JournalDuNoobMod.MODID);
 
-    public static final RegistryObject<BlockItem> BAICLAIR_ITEM = ITEMS.register("baiclair_item", () -> new BlockItem(BAICLAIR_BUSH_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_FOOD)));
+    public static final RegistryObject<BlockItem> BAICLAIR_ITEM = ITEMS.register("baiclair", () -> new BlockItem(BAICLAIR_BUSH_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_FOOD)));
 }

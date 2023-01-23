@@ -12,5 +12,5 @@ import net.minecraftforge.registries.RegistryObject;
 public class BlockInit {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, JournalDuNoobMod.MODID);
 
-    public static final RegistryObject<BaiclairBushBlock> BAICLAIR_BUSH_BLOCK = BLOCKS.register("baiclair_bush_block", () -> new BaiclairBushBlock());
+    public static final RegistryObject<BaiclairBushBlock> BAICLAIR_BUSH_BLOCK = BLOCKS.register("baiclair_bush", () -> new BaiclairBushBlock());
 }
