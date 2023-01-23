@@ -1,8 +1,7 @@
-package com.krafty.jdn.entity;// Made with Blockbench 4.6.0
-// Exported for Minecraft version 1.17 or later with Mojang mappings
-// Paste this class into your mod and generate all required imports
+package com.krafty.jdn.client.models;
 
-
+import com.krafty.jdn.JournalDuNoobMod;
+import com.krafty.jdn.entity.FoxHybrideEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.EntityModel;
@@ -13,13 +12,12 @@ import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 
-public class FoxHybrideModel<T extends Entity> extends EntityModel<T> {
-	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "custom_model"), "main");
+public class FoxHybrideEntityModel extends EntityModel<FoxHybrideEntity> {
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(JournalDuNoobMod.MODID, "foxhybride_entity"), "main");
 	private final ModelPart earLeft;
 	private final ModelPart earRight;
 
-	public FoxHybrideModel(ModelPart root) {
+	public FoxHybrideEntityModel(ModelPart root) {
 		this.earLeft = root.getChild("earLeft");
 		this.earRight = root.getChild("earRight");
 	}
@@ -44,13 +42,13 @@ public class FoxHybrideModel<T extends Entity> extends EntityModel<T> {
 	}
 
 	@Override
-	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-
-	}
-
-	@Override
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
 		earLeft.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		earRight.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+	}
+
+	@Override
+	public void setupAnim(FoxHybrideEntity p_102618_, float p_102619_, float p_102620_, float p_102621_, float p_102622_, float p_102623_) {
+
 	}
 }
