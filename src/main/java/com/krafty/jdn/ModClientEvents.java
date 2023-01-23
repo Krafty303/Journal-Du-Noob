@@ -28,6 +28,6 @@ public class ModClientEvents {
 
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
-        event.registerLayerDefinition(FoxHybrideEntityModel.LAYER_LOCATION,FoxHybrideEntityModel::createBodyLayer);
+        event.registerLayerDefinition(FoxHybrideEntityModel.LAYER_LOCATION, FoxHybrideEntityModel::createBodyLayer);
     }
 }

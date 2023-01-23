@@ -1,5 +1,6 @@
 package com.krafty.jdn.client.models;
 
+
 import com.krafty.jdn.JournalDuNoobMod;
 import com.krafty.jdn.entity.FoxHybrideEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -10,10 +11,9 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.Entity;
 
 public class FoxHybrideEntityModel extends EntityModel<FoxHybrideEntity> {
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(JournalDuNoobMod.MODID, "foxhybride_entity"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(JournalDuNoobMod.MODID, "foxhybride"), "main");
 	private final ModelPart earLeft;
 	private final ModelPart earRight;
 
@@ -42,13 +42,13 @@ public class FoxHybrideEntityModel extends EntityModel<FoxHybrideEntity> {
 	}
 
 	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-		earLeft.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		earRight.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+	public void setupAnim(FoxHybrideEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+
 	}
 
 	@Override
-	public void setupAnim(FoxHybrideEntity p_102618_, float p_102619_, float p_102620_, float p_102621_, float p_102622_, float p_102623_) {
-
+	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
+		earLeft.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+		earRight.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
 }
