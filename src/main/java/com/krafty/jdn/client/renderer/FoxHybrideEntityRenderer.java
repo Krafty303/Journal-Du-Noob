@@ -8,7 +8,8 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 
 public class FoxHybrideEntityRenderer extends MobRenderer<FoxHybrideEntity, FoxHybrideEntityModel> {
-    private static final ResourceLocation TEXTURE = new ResourceLocation(JournalDuNoobMod.MODID,"textures/entities/foxhybride_entity.png");
+    private static final ResourceLocation TEXTURE_RED = new ResourceLocation(JournalDuNoobMod.MODID,"textures/entities/foxhybride_red_entity.png");
+    private static final ResourceLocation TEXTURE_ARTIC = new ResourceLocation(JournalDuNoobMod.MODID,"textures/entities/foxhybride_artic_entity.png");
 
     public FoxHybrideEntityRenderer(EntityRendererProvider.Context ctx) {
         super(ctx, new FoxHybrideEntityModel(ctx.bakeLayer(FoxHybrideEntityModel.LAYER_LOCATION)), 0.5f);
@@ -16,6 +17,6 @@ public class FoxHybrideEntityRenderer extends MobRenderer<FoxHybrideEntity, FoxH
 
     @Override
     public ResourceLocation getTextureLocation(FoxHybrideEntity entity) {
-        return TEXTURE;
+        return entity.isRed() ? TEXTURE_RED : TEXTURE_ARTIC;
     }
 }

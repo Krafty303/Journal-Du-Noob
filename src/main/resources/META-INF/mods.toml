@@ -46,7 +46,7 @@ displayName="Journal Du Noob Mod" #mandatory
 
 # A text field displayed in the mod UI
 
-credits="" #optional
+credits="Merci à Cube Kid pour avoir créé Journal D'un Noob, à tous ceux qui m'ont aidé quand un bug apparaissait sur mon chemin, et à tant d'autres !" #optional
 
 # A text field displayed in the mod UI
 
@@ -63,12 +63,32 @@ authors="Krafty303" #optional
 # The description text for the mod (multi line!) (#mandatory)
 
 description='''
-L'adaptation dans Minecraft du roman Journal D'un Noob !
+Ce mod intitulé Journal Du Noob Mod est basé sur Journal d'un noob, une série de livres Minecraft de Cube Kid, 404 Edition (en anglais Diary of a 8-bit villager).
+Un maximum d'objets, systèmes, concepts, armes, outils, mobs etc. que l'on peut trouver dans la série se retrouve ICI, dans ce mod.
+
+J'espère que, si vous êtes un fan comme moi de cet univers, vous ne serez pas déçu du résultat ^^
+Pour les personnes n'ayant jamais entendu parler de cette série, je vous invite tout d'abord à la lire, mais ne vous inquiétez pas,
+ce roman, d'apparence décontracté et humoristique (côté qui reste tout le long), possède aussi un univers riche en éléments intéressants
+à ajouter à Minecraft.
+Bref, n'importe quel Minecraftien pourra trouver un intérêt dans ce mod, fan de la série ou pas.
+
+J'ai élaboré pour vous une petite liste d'éléments qui seront dans la version finale de ce mod (un peu de patience jeunes gens ;-) :
+
+ - Un système de races (joueurs & PNJs), qui ajoutera des elfes, des nains sombres, des hybrides, des nymphes, des lupins et nombre de créatures fantastiques
+ - Des nouveaux villages pour certaines races
+ - Système de crafting entièrement revisité pour coïcider avec les informations techniques disséminées dans le roman.
+ - Nouvelles dimensions, L'Aether, Le Vide, et d'autres
+ - Donjons aléatoires et boss
+ - Objets divers et variés
+ - Nouvelles nourritures, baies, pâtisseries et autres délices :yum:
+ - Armes, outils, enchantements d'un genre nouveau (les "traits", exemple : Légèreté II)
+ - Nouveaux minerais et matériaux plus ou moins précieux allant du quartz noir quasiment incassable et absolument inutile
+ (je cite le livre, "la plaie des mineurs") jusqu'à l'adamant, un des plus puissants minerais
 '''
 
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 
-[[dependencies.examplemod]] #optional
+[[dependencies.jdn]] #optional
     # the modid of the dependency
     modId="forge" #mandatory
     # Does this dependency have to exist - if not, ordering below must be specified
@@ -82,7 +102,7 @@ L'adaptation dans Minecraft du roman Journal D'un Noob !
 
 # Here's another dependency
 
-[[dependencies.examplemod]]
+[[dependencies.jdn]]
     modId="minecraft"
     mandatory=true
 
